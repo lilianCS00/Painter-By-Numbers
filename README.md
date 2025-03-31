@@ -18,6 +18,8 @@ This project focuses on building a model capable of determining whether two give
 - PyTorch (Deep Learning Framework)
 - ResNet34 (Pre-trained Convolutional Neural Network)
 - Triplet Loss Function (Distance-Based Learning)
+  
+  > ![Image](https://github.com/user-attachments/assets/d2a61ffe-4b45-4855-8d0a-57ddc59e9a79)
 - OpenCV & PIL (Image Processing)
 - Matplotlib & Seaborn (Visualization)
 
@@ -36,11 +38,11 @@ This project focuses on building a model capable of determining whether two give
 - The model was trained using triplet loss to improve its differentiation capabilities.
 - Achieved over 80% accuracy on the test dataset, demonstrating strong performance in recognizing artistic styles.
 
-## *Loss Plot* 
+### *Loss Plot* 
 
-> ![Image](https://github.com/user-attachments/assets/49c6ef28-9a17-4b74-b772-45d5cb2888fc)
+> ![Image](https://github.com/user-attachments/assets/0be610bd-1987-48c5-b197-a741927f7f15)
 
 
-## *Accuracy Plot*
+### *Accuracy Plot*
 
-> ![Image](https://github.com/user-attachments/assets/a5cbc9a4-4d36-471e-b235-8052a3d5eedf)
+> ![Image](https://github.com/user-attachments/assets/ee953db7-89ab-4f47-851b-62df3924ff98)
