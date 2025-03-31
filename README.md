@@ -1,1 +1,3 @@
 # Painter-By-Numbers
+
+The project aimed to create a model capable of determining whether two given images were created by the same artist. This was achieved using Siamese Networks to analyze image pairs, with a pre-trained ResNet34 architecture employed to extract meaningful features. Triplet loss was utilized during training to enhance the model’s ability to differentiate between artists, while data augmentation techniques were applied to improve dataset diversity and reduce overfitting. The model achieved an artist classification accuracy of over 80% on the test dataset, highlighting its effectiveness in recognizing artistic styles.
