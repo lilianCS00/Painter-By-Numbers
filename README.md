@@ -38,9 +38,9 @@ This project focuses on building a model capable of determining whether two give
 
 ## *Loss Plot* 
 
-![Image](https://github.com/user-attachments/assets/49c6ef28-9a17-4b74-b772-45d5cb2888fc)
+> ![Image](https://github.com/user-attachments/assets/49c6ef28-9a17-4b74-b772-45d5cb2888fc)
 
 
 ## *Accuracy Plot*
 
-![Image](https://github.com/user-attachments/assets/a5cbc9a4-4d36-471e-b235-8052a3d5eedf)
+> ![Image](https://github.com/user-attachments/assets/a5cbc9a4-4d36-471e-b235-8052a3d5eedf)
