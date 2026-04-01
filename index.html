@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painter Classification Results</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎨 Painter Classification Results</h1>
+            <p class="subtitle">Deep Learning Project for Artist Style Recognition</p>
+        </header>
+
+        <main>
+            <section class="model-overview">
+                <h2>Model Overview</h2>
+                <div class="overview-grid">
+                    <div class="overview-card">
+                        <h3>Architecture</h3>
+                        <p>Siamese Neural Network with ResNet18 backbone</p>
+                    </div>
+                    <div class="overview-card">
+                        <h3>Training Method</h3>
+                        <p>Triplet Loss with positive/negative image pairs</p>
+                    </div>
+                    <div class="overview-card">
+                        <h3>Final Accuracy</h3>
+                        <p class="accuracy-highlight">79.55%</p>
+                    </div>
+                    <div class="overview-card">
+                        <h3>Embedding Size</h3>
+                        <p>256-dimensional feature vectors</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="results">
+                <h2>Training Results</h2>
+                
+                <div class="results-grid">
+                    <div class="result-card">
+                        <h3>Test Performance</h3>
+                        <div class="metric">
+                            <span class="metric-label">Final Test Accuracy:</span>
+                            <span class="metric-value">79.55%</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Test Loss:</span>
+                            <span class="metric-value">1.9622</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Training Epochs:</span>
+                            <span class="metric-value">15</span>
+                        </div>
+                    </div>
+
+                    <div class="result-card">
+                        <h3>Best Performance (Epoch 12)</h3>
+                        <div class="metric">
+                            <span class="metric-label">Peak Training Accuracy:</span>
+                            <span class="metric-value">80%+</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Model Architecture:</span>
+                            <span class="metric-value">TripletNetwork</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Optimizer:</span>
+                            <span class="metric-value">Adam (lr: 0.00001)</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="methodology">
+                <h2>How It Works</h2>
+                <div class="process-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Image Triplets</h3>
+                            <p>Each training sample contains three images: two from the same artist (positive pair) and one from a different artist (negative example)</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Feature Extraction</h3>
+                            <p>ResNet18 extracts 256-dimensional embeddings from center-cropped 224x224 pixel images</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Distance Learning</h3>
+                            <p>Triplet loss minimizes distance between same-artist pairs while maximizing distance between different artists</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Classification</h3>
+                            <p>Model predicts if two paintings are by the same artist by comparing Euclidean distances in embedding space</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="dataset-info">
+                <h2>Dataset Information</h2>
+                <div class="dataset-grid">
+                    <div class="dataset-card">
+                        <h3>Data Split</h3>
+                        <ul>
+                            <li><strong>Training:</strong> Multiple artists with image pairs</li>
+                            <li><strong>Validation:</strong> 20% of training artists</li>
+                            <li><strong>Testing:</strong> Separate set of artists</li>
+                        </ul>
+                    </div>
+                    <div class="dataset-card">
+                        <h3>Data Augmentation</h3>
+                        <ul>
+                            <li>Random rotation (±15°)</li>
+                            <li>Random horizontal/vertical flips</li>
+                            <li>Random affine transformations</li>
+                            <li>ImageNet normalization</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="sample-results">
+                <h2>Sample Classification Results</h2>
+                <div class="sample-container">
+                    <div class="sample-item">
+                        <h4>Example Triplet</h4>
+                        <div class="triplet-example">
+                            <div class="image-placeholder">
+                                <span>Image 1</span>
+                                <small>Same Artist</small>
+                            </div>
+                            <div class="vs-icon">⚖️</div>
+                            <div class="image-placeholder">
+                                <span>Image 2</span>
+                                <small>Same Artist</small>
+                            </div>
+                            <div class="vs-icon">vs</div>
+                            <div class="image-placeholder">
+                                <span>Image 3</span>
+                                <small>Different Artist</small>
+                            </div>
+                        </div>
+                        <div class="prediction">
+                            <strong>Prediction:</strong> Images 1 & 2 are by the same artist ✓
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Deep Learning Project by Lillian Mansour (ID: 211623806)</p>
+            <p>Siamese Neural Network for Artist Classification</p>
+        </footer>
+    </div>
+</body>
+</html>
